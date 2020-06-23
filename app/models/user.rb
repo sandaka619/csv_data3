@@ -12,8 +12,8 @@ class User < ApplicationRecord
       puts "インポート開始"
       User.create!(list)
       puts "インポートに成功しました"
-     resuce ActiveModel::UnknowAttributeError >> invalid
-      puts "インポートに失敗しました:#{invalid}"
+      rescue ActiveModel::UnknowAttributeError >> invalid
+     puts "インポートに失敗しました:#{invalid}"
 
   end
 end
